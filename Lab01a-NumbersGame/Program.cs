@@ -54,9 +54,10 @@ namespace Lab01a_NumbersGame
 
         }
 
-        static int Populate(int[] array)
+        static int[] Populate(int[] array)
         {
             Console.WriteLine("I am the Populate method");
+            int[] newArray = new Int32[array.Length];
             // Iterate through the array and prompt the user to enter a specific number
             for (int i = 0; i < array.Length; i++)
             {
@@ -64,9 +65,11 @@ namespace Lab01a_NumbersGame
                 Console.WriteLine($"Please enter a number: {i} of {array.Length}");
                 number = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine($"Your choice was {number}");
+                newArray[i] = number;
 
             }
-            return 10;
+            Console.WriteLine(string.Join(", ", newArray));
+            return newArray;
         }
 
         static int GetSum()
