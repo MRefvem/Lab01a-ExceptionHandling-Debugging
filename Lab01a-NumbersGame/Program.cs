@@ -19,7 +19,7 @@ namespace Lab01a_NumbersGame
             }
             finally
             {
-                Console.WriteLine("The program has ended.");
+                Console.WriteLine("Program is complete.");
             }
         }
 
@@ -31,13 +31,12 @@ namespace Lab01a_NumbersGame
                 int number = 0;
                 // Utilize the Convert.ToInt23() method to convert the user's input to an integer.
                 number = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine(number);
                 // Instantiate a new integer array that is the size the user just inputted
                 int[] array = new int[number];
                 // Call the Populate method
-                Populate(array);
+                int[] newArray = Populate(array);
                 // Capture the sum by calling the GetSum method
-                GetSum();
+                GetSum(newArray);
                 // Capture the product by calling the GetProduct method
                 GetProduct();
                 // Capture the quotient by calling the GetQuotient method
@@ -56,7 +55,6 @@ namespace Lab01a_NumbersGame
 
         static int[] Populate(int[] array)
         {
-            Console.WriteLine("I am the Populate method");
             int[] newArray = new Int32[array.Length];
             // Iterate through the array and prompt the user to enter a specific number
             for (int i = 0; i < array.Length; i++)
@@ -64,18 +62,27 @@ namespace Lab01a_NumbersGame
                 int number = 0;
                 Console.WriteLine($"Please enter a number: {i} of {array.Length}");
                 number = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine($"Your choice was {number}");
                 newArray[i] = number;
-
             }
-            Console.WriteLine(string.Join(", ", newArray));
+            Console.WriteLine($"Your array is size: {array.Length}");
+            Console.WriteLine($"The numbers in the array are {string.Join(", ", newArray)}");
             return newArray;
         }
 
-        static int GetSum()
+        static int GetSum(int[] array)
         {
             Console.WriteLine("I am the GetSum method");
-            return 10;
+            int sum = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                sum = sum + array[i];
+            }
+            if (sum < 20)
+            {
+                throw new Exception($"Value of {sum} is too low");
+            }
+            Console.WriteLine($"The sum of the array is {sum}");
+            return sum;
         }
 
         static int GetProduct()
