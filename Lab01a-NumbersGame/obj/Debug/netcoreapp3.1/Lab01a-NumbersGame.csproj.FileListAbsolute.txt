@@ -1,0 +1,13 @@
+C:\Users\mkref\source\repos\Lab01a-ExceptionHandling-Debugging\Lab01a-NumbersGame\bin\Debug\netcoreapp3.1\Lab01a-NumbersGame.exe
+C:\Users\mkref\source\repos\Lab01a-ExceptionHandling-Debugging\Lab01a-NumbersGame\bin\Debug\netcoreapp3.1\Lab01a-NumbersGame.deps.json
+C:\Users\mkref\source\repos\Lab01a-ExceptionHandling-Debugging\Lab01a-NumbersGame\bin\Debug\netcoreapp3.1\Lab01a-NumbersGame.runtimeconfig.json
+C:\Users\mkref\source\repos\Lab01a-ExceptionHandling-Debugging\Lab01a-NumbersGame\bin\Debug\netcoreapp3.1\Lab01a-NumbersGame.runtimeconfig.dev.json
+C:\Users\mkref\source\repos\Lab01a-ExceptionHandling-Debugging\Lab01a-NumbersGame\bin\Debug\netcoreapp3.1\Lab01a-NumbersGame.dll
+C:\Users\mkref\source\repos\Lab01a-ExceptionHandling-Debugging\Lab01a-NumbersGame\bin\Debug\netcoreapp3.1\Lab01a-NumbersGame.pdb
+C:\Users\mkref\source\repos\Lab01a-ExceptionHandling-Debugging\Lab01a-NumbersGame\obj\Debug\netcoreapp3.1\Lab01a-NumbersGame.csprojAssemblyReference.cache
+C:\Users\mkref\source\repos\Lab01a-ExceptionHandling-Debugging\Lab01a-NumbersGame\obj\Debug\netcoreapp3.1\Lab01a-NumbersGame.AssemblyInfoInputs.cache
+C:\Users\mkref\source\repos\Lab01a-ExceptionHandling-Debugging\Lab01a-NumbersGame\obj\Debug\netcoreapp3.1\Lab01a-NumbersGame.AssemblyInfo.cs
+C:\Users\mkref\source\repos\Lab01a-ExceptionHandling-Debugging\Lab01a-NumbersGame\obj\Debug\netcoreapp3.1\Lab01a-NumbersGame.csproj.CoreCompileInputs.cache
+C:\Users\mkref\source\repos\Lab01a-ExceptionHandling-Debugging\Lab01a-NumbersGame\obj\Debug\netcoreapp3.1\Lab01a-NumbersGame.dll
+C:\Users\mkref\source\repos\Lab01a-ExceptionHandling-Debugging\Lab01a-NumbersGame\obj\Debug\netcoreapp3.1\Lab01a-NumbersGame.pdb
+C:\Users\mkref\source\repos\Lab01a-ExceptionHandling-Debugging\Lab01a-NumbersGame\obj\Debug\netcoreapp3.1\Lab01a-NumbersGame.genruntimeconfig.cache
