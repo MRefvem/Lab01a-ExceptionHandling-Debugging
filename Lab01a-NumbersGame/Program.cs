@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Dynamic;
+using System.Linq.Expressions;
 
 namespace Lab01a_NumbersGame
 {
@@ -36,11 +37,16 @@ namespace Lab01a_NumbersGame
                 // Call the Populate method
                 int[] newArray = Populate(array);
                 // Capture the sum by calling the GetSum method
-                GetSum(newArray);
+                int sum = GetSum(newArray);
                 // Capture the product by calling the GetProduct method
-                GetProduct();
+                int product = GetProduct(newArray, sum);
                 // Capture the quotient by calling the GetQuotient method
-                GetQuotient();
+                GetQuotient(product);
+
+                Console.WriteLine($"Your array is size: {array.Length}");
+                Console.WriteLine($"The numbers in the array are {string.Join(", ", newArray)}");
+                Console.WriteLine($"The sum of the array is {sum}");
+                //Console.WriteLine($"{sum} * {index} = {product}");
             }
             catch (FormatException e)
             {
@@ -60,18 +66,15 @@ namespace Lab01a_NumbersGame
             for (int i = 0; i < array.Length; i++)
             {
                 int number = 0;
-                Console.WriteLine($"Please enter a number: {i} of {array.Length}");
+                Console.WriteLine($"Please enter a number: {i+1} of {array.Length}");
                 number = Convert.ToInt32(Console.ReadLine());
                 newArray[i] = number;
             }
-            Console.WriteLine($"Your array is size: {array.Length}");
-            Console.WriteLine($"The numbers in the array are {string.Join(", ", newArray)}");
             return newArray;
         }
 
         static int GetSum(int[] array)
         {
-            Console.WriteLine("I am the GetSum method");
             int sum = 0;
             for (int i = 0; i < array.Length; i++)
             {
@@ -81,17 +84,29 @@ namespace Lab01a_NumbersGame
             {
                 throw new Exception($"Value of {sum} is too low");
             }
-            Console.WriteLine($"The sum of the array is {sum}");
             return sum;
         }
 
-        static int GetProduct()
+        static int GetProduct(int[] array, int sum)
         {
-            Console.WriteLine("I am the GetProduct method");
-            return 10;
+            try
+            {
+                int number = 0;
+                Console.WriteLine($"Please select a random number between 1 and {array.Length}");
+                number = Convert.ToInt32(Console.ReadLine());
+                int index = array[number];
+                int product = sum * index;
+                Console.WriteLine($"{sum} * {index} = {product}");
+                return product;
+            }
+
+            catch (IndexOutOfRangeException)
+            {
+                throw new Exception("Index out of range");
+            }
         }
 
-        static decimal GetQuotient()
+        static decimal GetQuotient(int product)
         {
             Console.WriteLine("I am the GetQuotient method");
             return 10;
