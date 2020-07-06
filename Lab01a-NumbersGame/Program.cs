@@ -94,7 +94,7 @@ namespace Lab01a_NumbersGame
                 int number = 0;
                 Console.WriteLine($"Please select a random number between 1 and {array.Length}");
                 number = Convert.ToInt32(Console.ReadLine());
-                int index = array[number];
+                int index = array[number-1];
                 int product = sum * index;
                 Console.WriteLine($"{sum} * {index} = {product}");
                 return product;
@@ -108,8 +108,21 @@ namespace Lab01a_NumbersGame
 
         static decimal GetQuotient(int product)
         {
-            Console.WriteLine("I am the GetQuotient method");
-            return 10;
+            try
+            {
+                int number = 0;
+                Console.WriteLine($"Please enter a number to divide your product {product} by");
+                number = Convert.ToInt32(Console.ReadLine());
+                decimal quotient = decimal.Divide(product, number);
+                Console.WriteLine($"{product} / {number} = {quotient}");
+                return quotient;
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Cannot divide by zero");
+                return 0;
+            }
+
         }
 
     }
