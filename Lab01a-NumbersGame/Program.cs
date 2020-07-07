@@ -25,7 +25,7 @@ namespace Lab01a_NumbersGame
             }
         }
 
-        // Summary - StartSequence is where we call for the user to establish the length of our array gather the calls for all of the helper methods and display our final output to the console window
+        /// Summary - StartSequence is where we call for the user to establish the length of our array gather the calls for all of the helper methods and display our final output to the console window
         static void StartSequence()
         {
             try
@@ -77,9 +77,9 @@ namespace Lab01a_NumbersGame
             // Iterate through the array and prompt the user to enter a specific number
             for (int i = 0; i < array.Length; i++)
             {
-                int number = 0;
                 Console.WriteLine($"Please enter a number: {i+1} of {array.Length}");
-                number = Convert.ToInt32(Console.ReadLine());
+                string response = Console.ReadLine();
+                int number = Convert.ToInt32(response);
                 newArray[i] = number;
             }
             return newArray;
